@@ -60,8 +60,14 @@ public class MainController implements Initializable {
             comboCategory.getSelectionModel().getSelectedIndex() < 0 ||
             txtWeight.getText().equals("")) {
 
-
-
+            Alert dialog = new Alert(Alert.AlertType.ERROR);
+            dialog.setTitle("Error");
+            dialog.setHeaderText("Error adding data");
+            dialog.setContentText("No field can be empty");
+            dialog.showAndWait();
+        } else {
+            food.add(new Food(txtFoodName.getText(), comboCategory.getSelectionModel().getSelectedItem(),
+                    Integer.parseInt(txtWeight.getText()),  Integer.parseInt(txtCalories.getText())));
         }
 
     }
