@@ -24,7 +24,7 @@
                      <children>
                         <Label minWidth="-Infinity" prefHeight="18.0" prefWidth="90.0" text="Food name" />
                         <TextField fx:id="txtFoodName" maxWidth="1.7976931348623157E308" prefWidth="150.0" HBox.hgrow="ALWAYS" />
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="Add" />
+                        <Button mnemonicParsing="false" onAction="#addFood" prefHeight="26.0" prefWidth="55.0" text="Add" />
                      </children>
                   </HBox>
                   <HBox spacing="20.0">
