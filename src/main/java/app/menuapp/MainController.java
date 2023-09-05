@@ -6,10 +6,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.file.Files;
@@ -96,5 +102,21 @@ public class MainController implements Initializable {
         }
     }
 
+    public List<Food> getFood() {
 
+        return food;
+    }
+
+    // move to chart view
+    public void goToChartView(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(MenuApp.class.getResource("chart.fxml"));
+        Parent view1 = loader.load();
+        Scene view1Scene = new Scene(view1);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(view1Scene);
+        stage.show();
+
+
+    }
 }
