@@ -5,13 +5,13 @@ public class Food {
     private String foodName;
     private String category;
     private int weight;
-    private float calories;
+    private double calories;
 
-    public Food(String foodName, String category, int weight, int calories) {
+    public Food(String foodName, String category, int weight, double calories) {
         this.foodName = foodName;
         this.category = category;
         this.weight = weight;
-        this.calories = calories * (weight / 100);
+        this.calories = calories * (weight / 100d);
     }
 
     public String getFoodName() {
@@ -31,19 +31,24 @@ public class Food {
     }
 
     public int getWeight() {
-        return weight;
+        return this.weight;
     }
 
     public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    public float getCalories() {
-        return calories;
+    public double getCalories() {
+        return this.calories;
     }
 
     // calories for the hole food
-    public void setCalories(float calories) {
-        this.calories = calories * ((float) this.weight / 100);
+    public void setCalories (double calories) {
+        this.calories = calories * ( double) this.weight / 100d;
+    }
+
+    @Override
+    public String toString() {
+        return foodName + ";" + category + ";" + weight + ";" + calories;
     }
 }

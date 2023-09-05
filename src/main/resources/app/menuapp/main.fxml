@@ -11,8 +11,8 @@
               <columns>
                 <TableColumn fx:id="colFoodName" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="216.80000311136246" text="Food name" />
                 <TableColumn fx:id="colFoodCategory" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="181.39999389648438" text="Food category" />
-                  <TableColumn fx:id="colWeightG" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="105.0" text="Weight (g)" />
-                  <TableColumn fx:id="colCalories" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="100.0" text="Calories" />
+                  <TableColumn fx:id="colWeightG" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="73.60003662109375" text="Weight (g)" />
+                  <TableColumn fx:id="colCalories" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="132.0" text="Total calories (kcal)" />
               </columns>
             </TableView>
          </children></AnchorPane>
@@ -41,7 +41,7 @@
                   </HBox>
                   <HBox spacing="20.0">
                      <children>
-                        <Label maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="90.0" text="Calories" />
+                        <Label maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="90.0" text="Calories / 100g" />
                         <TextField fx:id="txtCalories" maxWidth="1.7976931348623157E308" prefWidth="150.0" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
